@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,6 +13,23 @@ export default function Home() {
           height={38}
           priority
         />
+        
+        {/* 导航链接 */}
+        <nav className="flex gap-4 flex-wrap justify-center">
+          <Link 
+            href="/about"
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            关于我们
+          </Link>
+          <Link 
+            href="/blog"
+            className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+          >
+            博客
+          </Link>
+        </nav>
+
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
